@@ -1,7 +1,7 @@
 'use client'
 
 export default function Error({ error, reset }: { error: Error; reset: () => void }) {
-  console.error(error)
+ 
 
   return (
     <div style={{ padding: 20, color: 'red', fontFamily: 'monospace' }}>
