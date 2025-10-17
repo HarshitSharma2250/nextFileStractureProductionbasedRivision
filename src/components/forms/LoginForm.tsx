@@ -14,8 +14,7 @@ import { useRouter } from "next/navigation";
 
 
 export default function LoginForm() {
-const setName=useUserStore((state)=>state.setName)
-const setLogin=useUserStore((state)=>state.setLogin)
+const { setLogin, setName } = useUserStore((state) => state.actions);
 const router = useRouter();
 
  const { mutate, isPending } = useMutation({

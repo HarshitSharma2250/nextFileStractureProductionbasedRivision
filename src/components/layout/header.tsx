@@ -15,7 +15,7 @@ export default function Header(){
           <p><Link href="/blog">Blog</Link></p>
           <p><Link href="/contact">Contact</Link></p>
            <p><Link href="/product">product</Link></p>
-           <p><Link href="/dashbaord">dahsboard</Link></p>
+           <p><Link href="/dashboard">dashbaord</Link></p>
            <p><Link href="/login" onClick={()=>RemoveToken()}>logout</Link></p>
           </nav>
        

@@ -1,6 +1,7 @@
 'use client'
 
 import { useQuery } from "@tanstack/react-query"
+import Link from "next/link"
 
 export default function FakeStoreMatrix() {
   const {
@@ -27,7 +28,7 @@ export default function FakeStoreMatrix() {
   if (isFetching) return <p>isFetching products...</p>
 
 
-  
+  console.log("chek data----",products)
   return (
     <div className="p-4">
       <h2 className="text-xl font-semibold mb-3">
@@ -58,6 +59,14 @@ export default function FakeStoreMatrix() {
               ${item.price.toFixed(2)}
             </p>
             <p className="text-gray-400 text-xs">{item.category}</p>
+
+             <Link
+            href={`/dashboard/details/${item.id}`}
+            scroll={false} // prevent full reload
+            className="text-blue-500 hover:underline"
+          >
+            View
+          </Link>
           </li>
         ))}
       </ul>
